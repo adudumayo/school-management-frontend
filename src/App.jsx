@@ -1,12 +1,14 @@
-import './App.css'
+import './App.css';
+import LearnerList from './LearnerList';
 
 function App() {
 
   return (
     <>
-      <p className="read-the-docs">
-        Welcome to SMS, the best School Management System
+      <p>
+        Welcome to SMS, the best School Management System  
       </p>
+      <LearnerList />
     </>
   )
 }
