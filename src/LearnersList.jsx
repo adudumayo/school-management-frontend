@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function LearnerList() {
+function LearnersList() {
   return (
     <ul>
       <li>This can't be right</li>
@@ -8,4 +8,4 @@ function LearnerList() {
   );
 }
 
-export default LearnerList;
+export default LearnersList;

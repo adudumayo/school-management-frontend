@@ -1,5 +1,5 @@
 import './App.css';
-import LearnerList from './LearnerList';
+import LearnersList from './LearnersList';
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
       <p>
         Welcome to SMS, the best School Management System  
       </p>
-      <LearnerList />
+      <LearnersList />
     </>
   )
 }
