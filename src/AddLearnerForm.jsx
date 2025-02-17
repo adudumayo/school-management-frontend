@@ -7,7 +7,23 @@ function AddLearnerForm(){
 
   const postRequest = (event) => {
     event.preventDefault();
-    alert(`Got the name: ${name}`);
+    
+    fetch("http://localhost:8080/learners", 
+      {
+        method: "POST",
+        body: JSON.stringify(
+          {
+            name: name,
+            classVar: 7,
+            average: 78
+          }
+        ),
+        headers: {
+          "Content-type": "application/json",
+        },
+      })
+      .then((res) => res.json())
+      .then((json) => console.log(json));
   }
 
   return (
