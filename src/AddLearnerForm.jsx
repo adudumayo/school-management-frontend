@@ -5,11 +5,21 @@ function AddLearnerForm(){
   const [classVar, setClassVar] = useState('');
   const [average, setAverage] = useState('');
 
+  const postRequest = (event) => {
+    event.preventDefault();
+    alert(`Got the name: ${name}`);
+  }
+
   return (
-    <form>
+    <form onSubmit={postRequest}>
       <label>
-        <input type="text" value="name" />
+        <input 
+          type="text" 
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
       </label>
+      <input type="submit" />
     </form>
   );
 }
