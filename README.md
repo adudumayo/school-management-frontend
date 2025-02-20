@@ -1,8 +1,51 @@
-# React + Vite
+# School Management System Frontend  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web-based interface for managing school operations, allowing teachers, learners, and parents to interact with the system seamlessly.  
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** (Frontend framework)  
+- **Vite** (Build tool)  
+- **Tailwind CSS** (Styling)  
+
+## 🔧 Installation  
+
+### Linux & macOS  
+
+```sh
+git clone https://github.com/adudumayo/school-management-frontend.git  
+cd school-management-frontend  
+npm install  
+npm run dev  
+```  
+
+### Windows  
+
+```powershell
+git clone https://github.com/adudumayo/school-management-frontend.git  
+cd school-management-frontend  
+npm install  
+npm run dev  
+```  
+
+## 🏗 Setup  
+
+1. Install **Node.js**: [Download Node.js](https://nodejs.org/)  
+2. Ensure **npm** or **yarn** is installed  
+3. Configure `.env` file (API URL, environment settings, etc.)  
+
+## 📜 API Integration  
+
+- The frontend connects to the [School Management Backend](https://github.com/adudumayo/school-management-backend)  
+- Ensure the backend is running before testing  
+
+## 📌 Contribution  
+
+1. Fork the repo  
+2. Create a feature branch  
+3. Commit changes  
+4. Open a PR  
+
+## 📄 License  
+
+MIT License  
