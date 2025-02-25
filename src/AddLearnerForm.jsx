@@ -14,7 +14,7 @@ function AddLearnerForm(){
         body: JSON.stringify(
           {
             name: name,
-            classVar: 7,
+            class: 7,
             average: 78
           }
         ),
