@@ -15,7 +15,9 @@ function LearnersList() {
       <h2>List of Learners</h2>
       <ul>
         {learners.map((learner) => (
-          <li key={learner.id}>{learner.name} is the name</li>
+          <li key={learner.id}>
+            Name: {learner.name} Class: {learner.class} Average: {learner.average} Id: {learner.id}
+          </li>
         ))}
       </ul>
     </div>

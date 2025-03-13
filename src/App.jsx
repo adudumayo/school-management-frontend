@@ -1,6 +1,6 @@
 import './App.css';
-import LearnersList from './LearnersList';
-import AddLearnerForm from './AddLearnerForm';
+import LearnersList from './components/admin/LearnersList';
+import AddLearnerForm from './components/admin/AddLearnerForm';
 
 function App() {
 

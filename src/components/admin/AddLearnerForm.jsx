@@ -1,13 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function AddLearnerForm(){
   const [name, setName] = useState('');
   const [classVar, setClassVar] = useState(1);
   const [average, setAverage] = useState(0.00);
 
-  const postRequest = (event) => {
-    event.preventDefault();
-    
+  const postRequest = () => {
     fetch("http://localhost:8080/learners", 
       {
         method: "POST",
