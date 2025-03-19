@@ -1,21 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
-function AddLearnerForm(){
-  const [name, setName] = useState('');
-  const [classVar, setClassVar] = useState('');
-  const [average, setAverage] = useState('');
+function AddQuizForm(){
+  const [subject, setSubject] = useState('');
 
-  const postRequest = (event) => {
-    event.preventDefault();
-    
-    fetch("http://localhost:8080/learners", 
+  const postQuiz = () => {
+    fetch("http://localhost:8080/quizzes", 
       {
         method: "POST",
         body: JSON.stringify(
           {
-            name: name,
-            class: 7,
-            average: 78
+            subject: subject
           }
         ),
         headers: {
@@ -27,12 +21,12 @@ function AddLearnerForm(){
   }
 
   return (
-    <form onSubmit={postRequest}>
+    <form onSubmit={postQuiz}>
       <label>
         <input 
           type="text" 
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
         />
       </label>
       <input type="submit" />
@@ -40,4 +34,4 @@ function AddLearnerForm(){
   );
 }
 
-export default AddLearnerForm;
+export default AddQuizForm;

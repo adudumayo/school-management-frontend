@@ -16,7 +16,7 @@ function LearnersList() {
       <ul>
         {learners.map((learner) => (
           <li key={learner.id}>
-            Name: {learner.name} Class: {learner.class} Average: {learner.average} Id: {learner.id}
+            {learner.id}. {learner.name} -> {learner.class} =>  {learner.average}
           </li>
         ))}
       </ul>
