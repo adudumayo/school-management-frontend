@@ -26,6 +26,7 @@ function AddLearnerForm(){
 
   return (
     <form onSubmit={postRequest}>
+      <h1>Add A New Learner As Admin</h1>
       <label>Name:  
         <input 
           type="text" 
