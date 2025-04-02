@@ -3,8 +3,13 @@ import { useState } from 'react';
 function DeleteLearnerForm () {
   const [id, setId] = useState(99);
 
-  const deleteRequest = (event) => {
-    event.preventDefault();
+  /*
+   * const funcName = (event) => {
+   *  event.preventDefault();
+   *
+   */
+
+  const deleteRequest = () => {
     fetch(`http://localhost:8080/learners/${id}`,
       {
         method: "DELETE",
