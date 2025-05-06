@@ -1,7 +1,7 @@
 function LearnerDashboard() {
   return (
     <>
-      <h1>Hello, TestName</h1>
+      <h1>Hello, Learner</h1>
     </>
   )
 }
