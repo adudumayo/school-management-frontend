@@ -8,6 +8,10 @@ function RoleForm() {
 
   if (isLearner) {
     return <LearnerDashboard />
+  } else if (isTeacher) {
+    return <LearnerDashboard />
+  } else if (isParent) {
+    return <LearnerDashboard />
   }
 
   return (
