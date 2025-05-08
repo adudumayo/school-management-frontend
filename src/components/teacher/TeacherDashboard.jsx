@@ -1,11 +1,29 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function TeacherDashboard() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [loginResponse, setLoginResponse] = useState('');
 
-  const loginRequest = () => {
-    alert("You are logged in")
+  useEffect(() => {
+    fetch(`http://localhost:8080/teacher_login/username/${username}/password/${password}`)
+      .then((res) => res.json())
+      .then((data) => setLoginResponse(data))
+      .catch((err) => console.error("Error logging the user in:", err));
+  }, []);
+
+  if (loginResponse == "Approved") {
+    return (
+      <>
+        <p>Login Went Well Welcome</p>
+      </>
+    )
+  } else {
+    return (
+      <>
+        <p>Something went wrong somehow, FIX IT!</p>
+      </>
+    )
   }
   
   return (
