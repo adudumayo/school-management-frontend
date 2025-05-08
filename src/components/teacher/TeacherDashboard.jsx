@@ -5,27 +5,17 @@ function TeacherDashboard() {
   const [password, setPassword] = useState('');
   const [loginResponse, setLoginResponse] = useState('');
 
-  useEffect(() => {
-    fetch(`http://localhost:8080/teacher_login/username/${username}/password/${password}`)
-      .then((res) => res.json())
-      .then((data) => setLoginResponse(data))
-      .catch((err) => console.error("Error logging the user in:", err));
-  }, []);
+  const loginRequest = (event) => {
+    event.preventDefault();
 
-  if (loginResponse == "Approved") {
-    return (
-      <>
-        <p>Login Went Well Welcome</p>
-      </>
-    )
-  } else {
-    return (
-      <>
-        <p>Something went wrong somehow, FIX IT!</p>
-      </>
-    )
+    useEffect(() => {
+      fetch(`http://localhost:8080/teacher__login/username/${username}/password/${password}`)
+        .then((res) => res.json())
+        .then((data) => setLoginResponse(data))
+        .catch((err) => console.error("Error logging the user in:", err));
+    }, []);
   }
-  
+   
   return (
     <>
       <h1>Hello, Teacher</h1>
@@ -52,8 +42,15 @@ function TeacherDashboard() {
         </label>
         <input type="submit" />
       </form>
+
+      { loginResponse === "Approved" ? (
+        <>Successful Login Statement</>
+      ) : (
+        <>Unsuccessful Login Statement</>
+      )}
     </>
   )
 }
+
 
 export default TeacherDashboard;
