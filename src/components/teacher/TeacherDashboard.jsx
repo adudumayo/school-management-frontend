@@ -8,12 +8,10 @@ function TeacherDashboard() {
   const loginRequest = (event) => {
     event.preventDefault();
 
-    useEffect(() => {
-      fetch(`http://localhost:8080/teacher__login/username/${username}/password/${password}`)
-        .then((res) => res.json())
-        .then((data) => setLoginResponse(data))
-        .catch((err) => console.error("Error logging the user in:", err));
-    }, []);
+    fetch(`http://localhost:8080/teacher_login/username/${username}/password/${password}`)
+      .then((res) => res.json())
+      .then((data) => setLoginResponse(data))
+      .catch((err) => console.error("Error logging the user in:", err));
   }
    
   return (
