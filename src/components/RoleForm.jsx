@@ -1,6 +1,6 @@
 import { useState } from "react";
 import LearnerDashboard from './learner/LearnerDashboard'
-import TeacherDashboard from './teacher/TeacherDashboard'
+import TeacherLogin from './teacher/TeacherLogin'
 import ParentDashboard from './parent/ParentDashboard.jsx'
 
 function RoleForm() {
@@ -9,7 +9,7 @@ function RoleForm() {
   const [isParent, setIsParent] = useState(false);
 
   if (isTeacher) {
-    return <TeacherDashboard />
+    return <TeacherLogin />
   } else if (isLearner) {
     return <LearnerDashboard />
   } else if (isParent) {
