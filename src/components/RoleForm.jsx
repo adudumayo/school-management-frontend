@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PageUnderConstruction from './PageUnderConstruction'
 import LearnerDashboard from './learner/LearnerDashboard'
 import TeacherLogin from './teacher/TeacherLogin'
 import ParentDashboard from './parent/ParentDashboard.jsx'
@@ -11,9 +12,9 @@ function RoleForm() {
   if (isTeacher) {
     return <TeacherLogin />
   } else if (isLearner) {
-    return <LearnerDashboard />
+    return <PageUnderConstruction />
   } else if (isParent) {
-    return <ParentDashboard />
+    return <PageUnderConstruction />
   }
 
   return (
