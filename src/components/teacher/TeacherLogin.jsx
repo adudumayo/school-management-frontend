@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-function TeacherDashboard() {
+function TeacherLogin() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [loginResponse, setLoginResponse] = useState('');
@@ -51,4 +51,4 @@ function TeacherDashboard() {
 }
 
 
-export default TeacherDashboard;
+export default TeacherLogin;
