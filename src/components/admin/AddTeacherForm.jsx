@@ -1,4 +1,6 @@
 function AddTeacherForm() {
-  <>This Is Where The Admin Adds A New Teacher</>
+  return (
+    <>Here, Admin registers a new teacher to the school database</>
+  )
 }
 export default AddTeacherForm;

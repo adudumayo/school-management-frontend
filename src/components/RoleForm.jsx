@@ -18,7 +18,7 @@ function RoleForm() {
   } else if (isParent) {
     return <PageUnderConstruction />
   } else if (isAdmin) {
-    <AddTeacherForm />
+    return <AddTeacherForm />
   }
 
   return (
