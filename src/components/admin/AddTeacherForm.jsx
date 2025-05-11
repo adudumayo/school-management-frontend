@@ -1,6 +1,28 @@
+import { useState } from 'react';
+
 function AddTeacherForm() {
+  const [surname, setSurname] = ("");
+  const [username, setUsername] = ("");
+  const [title, setTitle] = ("");
+  const [password, setPassword] = ("");
+
+  const AddTeacherRequest = () => {
+    alert("Perfecto");
+  }
+
+
   return (
-    <>Here, Admin registers a new teacher to the school database</>
+    <form onSubmit={AddTeacherRequest}>
+      <label>Surname:
+        <input
+          type="text"
+          value={surname}
+          onChange={(e) => setSurname(e.target.value)}
+        />
+      </label>
+      <input type='submit' />
+    </form>
+    
   )
 }
 export default AddTeacherForm;
