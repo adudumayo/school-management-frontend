@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AdminOperations from './AdminOperations'
 
 function AdminLogin() {
 
@@ -10,7 +11,7 @@ function AdminLogin() {
   }
 
   if (isApproved) {
-    return <>WHAT OP DO YOU WANNA ADMIN MY ADMIN?</>
+    return <AdminOperations />
   }
 
   return (
