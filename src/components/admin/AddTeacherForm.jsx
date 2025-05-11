@@ -1,13 +1,29 @@
 import { useState } from 'react';
 
 function AddTeacherForm() {
-  const [surname, setSurname] = ("");
-  const [username, setUsername] = ("");
-  const [title, setTitle] = ("");
-  const [password, setPassword] = ("");
+  const [surname, setSurname] = useState("");
+  const [username, setUsername] = useState("");
+  const [title, setTitle] = useState("");
+  const [password, setPassword] = useState("");
 
   const AddTeacherRequest = () => {
-    alert("Perfecto");
+    fetch("http://localhost:8080/teachers", 
+      {
+        method: "POST",
+        body: JSON.stringify(
+          {
+            surname: surname,
+            username: username,
+            title: title,
+            password: password
+          }
+        ),
+        headers: {
+          "Content-type": "application/json",
+        },
+      })
+      .then((res) => res.json())
+      .then((json) => console.log(json));
   }
 
 
