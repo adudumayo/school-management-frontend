@@ -1,7 +1,16 @@
+import { useState } from "react";
+
 function AdminLogin() {
 
-  const AdminLoginRequest = () => {
-    alert("Hello Admin");
+  const [isApproved, setIsApproved] = useState(false);
+
+  const AdminLoginRequest = (e) => {
+    e.preventDefault();
+    setIsApproved(true);
+  }
+
+  if (isApproved) {
+    return <>WHAT OP DO YOU WANNA ADMIN MY ADMIN?</>
   }
 
   return (
