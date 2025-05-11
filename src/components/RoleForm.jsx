@@ -2,12 +2,14 @@ import { useState } from "react";
 import PageUnderConstruction from './PageUnderConstruction'
 import LearnerDashboard from './learner/LearnerDashboard'
 import TeacherLogin from './teacher/TeacherLogin'
-import ParentDashboard from './parent/ParentDashboard.jsx'
+import ParentDashboard from './parent/ParentDashboard'
+import AddTeacherForm from './admin/AddTeacherForm'
 
 function RoleForm() {
   const [isTeacher, setIsTeacher] = useState(false);
   const [isLearner, setIsLearner] = useState(false);
   const [isParent, setIsParent] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   if (isTeacher) {
     return <TeacherLogin />
@@ -15,6 +17,8 @@ function RoleForm() {
     return <PageUnderConstruction />
   } else if (isParent) {
     return <PageUnderConstruction />
+  } else if (isAdmin) {
+    <AddTeacherForm />
   }
 
   return (
@@ -35,6 +39,11 @@ function RoleForm() {
             type="button"
             value="Parent"
             onClick={(e) => setIsParent(true)}
+          />
+          <input
+            type="button"
+            value="Admin"
+            onClick={(e) => setIsAdmin(true)}
           />
         </label>
       </form>
