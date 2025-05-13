@@ -13,6 +13,10 @@ function TeacherLogin() {
       .then((data) => setLoginResponse(data))
       .catch((err) => console.error("Error logging the user in:", err));
   }
+
+  if (loginResponse === "Approved") {
+    return <>You Are Through</>
+  }
    
   return (
     <>
@@ -40,12 +44,6 @@ function TeacherLogin() {
         </label>
         <input type="submit" />
       </form>
-
-      { loginResponse === "Approved" ? (
-        <>Successful Login Statement</>
-      ) : (
-        <>Unsuccessful Login Statement</>
-      )}
     </>
   )
 }
