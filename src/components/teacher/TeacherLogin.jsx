@@ -5,8 +5,8 @@ function TeacherLogin() {
   const [password, setPassword] = useState('');
   const [loginResponse, setLoginResponse] = useState('');
 
-  const loginRequest = (event) => {
-    event.preventDefault();
+  const loginRequest = (e) => {
+    e.preventDefault();
 
     fetch(`http://localhost:8080/teacher_login/username/${username}/password/${password}`)
       .then((res) => res.json())
