@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import TeacherOperations from './TeacherOperations'
 
 function TeacherLogin() {
   const [username, setUsername] = useState('');
@@ -15,7 +16,7 @@ function TeacherLogin() {
   }
 
   if (loginResponse === "Approved") {
-    return <>You Are Through</>
+    return <TeacherOperations />
   }
    
   return (
