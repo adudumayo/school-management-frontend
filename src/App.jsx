@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import RoleForm from './components/RoleForm';
+import TeacherLogin from './components/teacher/TeacherLogin'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<RoleForm />} />
+        <Route path='/teacher_login' element={<TeacherLogin />} />
       </Routes>
     </BrowserRouter>
   )
