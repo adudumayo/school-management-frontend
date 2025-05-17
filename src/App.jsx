@@ -26,3 +26,9 @@ export default App
 // 3. Start taking care of the code and use identifiers in the html tags, make styling less headache
 // 4. Understand the Label in the form tag
 // 5. Understand the e for event in the onClicks
+//
+// -- NOT A COMMENT --
+// A Pat On The Back, Let Me Rest And Come Back
+// Stronger Tomorrow
+// To Do More Routes
+// -- I GUESS IT WAS A COMMENT --
