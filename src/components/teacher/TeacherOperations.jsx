@@ -2,7 +2,15 @@ function TeacherOperations() {
 
   return (
     <>
-      <h1>This Is The Set Of Operations That You Can Perform</h1>
+      <form>
+        <label>Choose An Operation:
+          <input
+            type="button"
+            value="Mark Attendance"
+            onClick={(e) => alert("Take the register")}
+          />
+        </label>
+      </form>
     </>
   )
 }
