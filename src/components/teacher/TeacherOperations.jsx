@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PageUnderConstruction from '../PageUnderConstruction'
 
 function TeacherOperations() {
 
@@ -9,6 +10,10 @@ function TeacherOperations() {
   const [uploadResources, setUploadResources] = useState(false);
   const [viewTimetable, setViewTimetable] = useState(false);
 
+  if (markRegister) {
+    return <PageUnderConstruction />
+  }
+
   return (
     <>
       <form>
@@ -16,7 +21,7 @@ function TeacherOperations() {
           <input
             type="button"
             value="Mark Attendance"
-            onClick={(e) => alert("Take the register")}
+            onClick={(e) => setMarkRegister(true)}
           />
           <input
             type="button"
