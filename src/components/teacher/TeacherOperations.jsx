@@ -1,4 +1,13 @@
+import { useState } from 'react';
+
 function TeacherOperations() {
+
+  const [markRegister, setMarkRegister] = useState(false);
+  const [createQuiz, setCreateQuiz] = useState(false);
+  const [viewLearners, setViewLearners] = useState(false);
+  const [makeAnnouncement, setMakeAnnouncement] = useState(false);
+  const [uploadResources, setUploadResources] = useState(false);
+  const [viewTimetable, setViewTimetable] = useState(false);
 
   return (
     <>
