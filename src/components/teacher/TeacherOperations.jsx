@@ -12,6 +12,16 @@ function TeacherOperations() {
 
   if (markRegister) {
     return <PageUnderConstruction />
+  } else if (createQuiz) {
+    return <PageUnderConstruction />
+  } else if (viewLearners) {
+    return <PageUnderConstruction />
+  } else if (makeAnnouncement) {
+    return <PageUnderConstruction />
+  } else if (uploadResources) {
+    return <PageUnderConstruction />
+  } else if (viewTimetable) {
+    return <PageUnderConstruction />
   }
 
   return (
@@ -26,27 +36,27 @@ function TeacherOperations() {
           <input
             type="button"
             value="Create A Quiz"
-            onClick={(e) => alert("Take the register")}
+            onClick={(e) => setCreateQuiz(true)}
           />
           <input
             type="button"
             value="View Learners"
-            onClick={(e) => alert("Take the register")}
+            onClick={(e) => setViewLearners(true)}
           />
           <input
             type="button"
             value="Make An Announcement"
-            onClick={(e) => alert("Take the register")}
+            onClick={(e) => setMakeAnnouncement(true)}
           />
           <input
             type="button"
             value="Upload Resources"
-            onClick={(e) => alert("Take the register")}
+            onClick={(e) => setUploadResources(true)}
           />
           <input
             type="button"
             value="View Timetable"
-            onClick={(e) => alert("Take the register")}
+            onClick={(e) => setViewTimetable(true)}
           />
         </label>
       </form>
