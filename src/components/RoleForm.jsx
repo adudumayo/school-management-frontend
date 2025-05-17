@@ -1,7 +1,6 @@
 import { useState } from "react";
 import PageUnderConstruction from './PageUnderConstruction'
 import TeacherLogin from './teacher/TeacherLogin'
-import AddTeacherForm from './admin/AddTeacherForm'
 import AdminLogin from './admin/AdminLogin'
 
 function RoleForm() {
