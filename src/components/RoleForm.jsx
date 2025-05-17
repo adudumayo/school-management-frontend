@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 import PageUnderConstruction from './PageUnderConstruction'
 import TeacherLogin from './teacher/TeacherLogin'
@@ -9,8 +10,10 @@ function RoleForm() {
   const [isParent, setIsParent] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
 
+  const navigate = useNavigate();
+
   if (isTeacher) {
-    return <TeacherLogin />
+    navigate('/teacher_login')
   } else if (isLearner) {
     return <PageUnderConstruction />
   } else if (isParent) {
