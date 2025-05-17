@@ -1,16 +1,19 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import RoleForm from './components/RoleForm';
 
 function App() {
 
   return (
-    <>
+    <BrowserRouter>
       <h1>
         Welcome to TriPort, the best School Management System  
       </h1>
 
-      <RoleForm />
-    </>
+      <Routes>
+        <Route path='/' element={<RoleForm />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
