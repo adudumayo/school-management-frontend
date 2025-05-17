@@ -11,27 +11,27 @@ function TeacherOperations() {
           />
           <input
             type="button"
-            value="Mark Attendance"
+            value="Create A Quiz"
             onClick={(e) => alert("Take the register")}
           />
           <input
             type="button"
-            value="Mark Attendance"
+            value="View Learners"
             onClick={(e) => alert("Take the register")}
           />
           <input
             type="button"
-            value="Mark Attendance"
+            value="Make An Announcement"
             onClick={(e) => alert("Take the register")}
           />
           <input
             type="button"
-            value="Mark Attendance"
+            value="Upload Resources"
             onClick={(e) => alert("Take the register")}
           />
           <input
             type="button"
-            value="Mark Attendance"
+            value="View Timetable"
             onClick={(e) => alert("Take the register")}
           />
         </label>
